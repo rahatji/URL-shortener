@@ -2,12 +2,17 @@ const uid = require('uid-safe');
 const URL = require('../models/URL');
 
 async function generateID(req, res) {
-  const { url } = req.body;
+  let { url } = req.body;
 
 
   if (!url) {
     return res.status(400).json({ error: "URL is required" });
   }
+
+  if (!/^https?:\/\//i.test(url)) {
+    url = `http://${url}`;
+}
+
 
   try {
     // Check if the URL already exists

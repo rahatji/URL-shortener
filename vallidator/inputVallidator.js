@@ -11,8 +11,9 @@ const URL = require("../models/URL");
 // URL validation 
 const urlValidationRules = [
     check('url')
-        .isURL()
-        .withMessage('Invalid URL format')
+        .trim()
+        .notEmpty().withMessage('URL is required')
+        .isURL().withMessage('Invalid URL format')
         .isLength({ max: 2048 })
         .withMessage('URL is too long, must be less than 2048 characters')
 ];
