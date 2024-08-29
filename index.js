@@ -23,9 +23,9 @@ app.use(express.urlencoded({extended : true}))
 //env config
 dotenv.config();
 
- //set view engine
+//set view engine
 
- app.set("view engine", "ejs")
+app.set("view engine", "ejs")
 
 //route
 app.use("/",generateURL);

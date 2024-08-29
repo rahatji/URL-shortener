@@ -2,7 +2,7 @@ const uid = require('uid-safe');
 const URL = require('../models/URL');
 
 async function generateID(req, res) {
-    const { url } = req.body;
+    let { url } = req.body;
 
     // checking correct url or not
     if (!url) {
