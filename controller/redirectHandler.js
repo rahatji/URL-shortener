@@ -1,4 +1,4 @@
-const URL = require ("../models/URL");
+const URL = require ("../models/Url");
 
 async function getURL(req,res) {
 
@@ -10,6 +10,8 @@ async function getURL(req,res) {
 
         if (urlEntry) {
             // Redirect to the original URL
+            urlEntry.clicks += 1; // Increment click count
+            await urlEntry.save(); // Save the updated document
             return res.redirect(urlEntry.URL);
         } else {
             //  shortID is not found

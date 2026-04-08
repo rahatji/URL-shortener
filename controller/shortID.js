@@ -1,5 +1,5 @@
 const uid = require('uid-safe'); 
-const URL = require('../models/URL');
+const URL = require('../models/Url');
 
 async function generateID(req, res) {
     let { url } = req.body;

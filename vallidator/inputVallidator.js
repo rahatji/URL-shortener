@@ -3,7 +3,7 @@ const {check,validationResult} = require("express-validator");
 
 
 // internal imports
-const URL = require("../models/URL");
+const URL = require("../models/Url");
 
 
 

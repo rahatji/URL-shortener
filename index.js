@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 // internal imports
 const generateURL = require("./routes/generateURL");
 const redirectURL = require("./routes/redirect");
-const URL = require ("./models/URL");
+const URL = require ("./models/Url");
 
 const app = express();
 
