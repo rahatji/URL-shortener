@@ -1,0 +1,1 @@
+app.get("/api/statistics/:urlId", auth, fetchUrlStats);
